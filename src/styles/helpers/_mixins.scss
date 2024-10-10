@@ -1,0 +1,23 @@
+@use 'constants' as *;
+
+@mixin mq($breakpoint, $orientation: null) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value {
+    @if $orientation == 'portrait' {
+      @media (min-width: $value) and (orientation: portrait) {
+        @content;
+      }
+    } @else if $orientation == 'landscape' {
+      @media (min-width: $value) and (orientation: landscape) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $value) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "No value found for breakpoint: `#{$breakpoint}`.";
+  }
+}

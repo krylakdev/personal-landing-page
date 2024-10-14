@@ -1,0 +1,73 @@
+@use 'helpers/colors';
+@use 'helpers/constants';
+@use 'helpers/mixins';
+
+:host {
+  display: block;
+}
+
+.section {
+  display: flex;
+
+  &__bar {
+    $width-min: constants.$bar-width-horizontal-min;
+    $width-max: constants.$bar-width-horizontal;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: clamp($width-min, 20vw, $width-max);
+    margin-left: constants.$space-bar-from-edge-sm;
+    background-color: colors.$color-secondary;
+  }
+
+  &__heading {
+    $font-size-min: constants.$section-heading-size-min;
+    $font-size-max: constants.$section-heading-size;
+
+    position: sticky;
+    top: 0;
+    padding: constants.$space-sections-sm 0;
+    writing-mode: vertical-rl;
+    font-size: clamp($font-size-min, 8vw, $font-size-max);
+    color: constants.$section-heading-color;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0.2rem rgba(255, 255, 255, 0.25);
+    letter-spacing: constants.$section-heading-letter-spacing;
+    white-space: nowrap;
+  }
+
+  &__content {
+    margin: constants.$space-sections-sm 0;
+    padding: 1rem;
+    flex-grow: 1;
+  }
+
+  @include mixins.mq('laptop') {
+    &__bar {
+      margin-left: constants.$space-bar-from-edge-md;
+    }
+
+    &__heading {
+      padding: constants.$space-sections-md 0;
+    }
+
+    &__content {
+      margin: constants.$space-sections-md 0;
+    }
+  }
+
+  @include mixins.mq('desktop') {
+    &__bar {
+      margin-left: constants.$space-bar-from-edge-lg;
+    }
+
+    &__heading {
+      padding: constants.$space-sections-lg 0;
+    }
+
+    &__content {
+      margin: constants.$space-sections-lg 0;
+    }
+  }
+}

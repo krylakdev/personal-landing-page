@@ -1,5 +1,6 @@
-@use 'helpers/constants' as *;
+@use 'helpers/constants';
+@use 'helpers/colors';
 
 body {
-  background-color: $background-color;
+  background-color: colors.$main-background-color;
 }

@@ -1,14 +1,32 @@
+@use 'helpers/colors';
+
 // FONTS
-
 $font-family-base: system-ui;
-$font-family-heading: serif;
+$font-family-heading: 'Protest Strike', sans-serif;
 
-// COLORS
-$background-color: #fafafa;
+$section-heading-size: 3rem;
+$section-heading-size-min: 1.5rem;
+$section-heading-color: lighten(colors.$color-secondary, 3%);
+$section-heading-letter-spacing: 0.75em;
 
 // MEDIA QUERIES
 $breakpoints: (
   'tablet': 786px,
+  'laptop-sm': 1024px,
   'laptop': 1280px,
+  'desktop-sm': 1440px,
   'desktop': 1920px,
 );
+
+// SPACES
+$space-sections-sm: 8rem;
+$space-sections-md: 14rem;
+$space-sections-lg: 20rem;
+
+$space-bar-from-edge-sm: 1rem;
+$space-bar-from-edge-md: 3rem;
+$space-bar-from-edge-lg: 6rem;
+
+// CONSTANTS
+$bar-width-horizontal: 300px;
+$bar-width-horizontal-min: 50px;

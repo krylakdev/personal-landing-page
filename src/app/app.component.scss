@@ -1,4 +1,8 @@
-@use 'helpers';
+@use 'helpers/mixins';
+
+:host {
+  display: block;
+}
 
 .hero {
   $linear-gradient: linear-gradient(rgba(0, 0, 0, 0.75) 0%, rgba(82, 82, 82, 0.5) 75%, rgba(250, 250, 250) 100%);
@@ -9,11 +13,11 @@
   background-size: cover;
   background-position: center;
 
-  @include helpers.mq('laptop') {
+  @include mixins.mq('laptop') {
     background-image: $linear-gradient, url('/images/hero-bg-1280.jpg');
   }
 
-  @include helpers.mq('desktop') {
+  @include mixins.mq('desktop') {
     background-image: $linear-gradient, url('/images/hero-bg-1920.jpg');
   }
 }

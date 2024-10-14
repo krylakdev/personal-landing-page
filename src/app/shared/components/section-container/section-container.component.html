@@ -2,8 +2,10 @@
   <aside class="vertical-bar section__bar">
     <h2 class="section__bar-heading">{{ sectionName() }}</h2>
   </aside>
-  <article class="section__content">
+  <article class="section__content-container">
     <h3 class="section__heading">{{ sectionName() }}</h3>
-    <ng-content />
+    <div class="section__content">
+      <ng-content />
+    </div>
   </article>
 </section>

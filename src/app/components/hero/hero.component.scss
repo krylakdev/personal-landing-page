@@ -1,6 +1,7 @@
 @use 'helpers/colors';
 @use 'helpers/constants';
 @use 'helpers/mixins';
+@use 'helpers/animations' as *;
 
 :host {
   display: block;
@@ -20,6 +21,7 @@
   &__subheading {
     color: colors.$text-color-secondary;
     text-shadow: 2px 4px 0.5rem rgba(0, 0, 0, 0.25);
+    animation: slideInFromLeft 1s 1 both;
   }
 
   &__heading {
@@ -27,6 +29,7 @@
     $font-size-max: 6rem;
 
     font-size: clamp($font-size-min, 8vw, $font-size-max);
+    animation-delay: 0.2s;
   }
 
   &__subheading {
@@ -35,6 +38,7 @@
 
     font-size: clamp($font-size-min, 4vw, $font-size-max);
     font-weight: 400;
+    animation-delay: 0.4s;
   }
 
   &__subheading-uppercase {

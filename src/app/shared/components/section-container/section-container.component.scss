@@ -10,15 +10,9 @@
   display: flex;
 
   &__bar {
-    $width-min: constants.$bar-width-horizontal-min;
-    $width-max: constants.$bar-width-horizontal;
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-basis: clamp($width-min, 20vw, $width-max);
-    margin-left: constants.$space-bar-from-edge-sm;
-    background-color: colors.$color-secondary;
   }
 
   &__bar-heading {

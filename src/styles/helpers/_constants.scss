@@ -4,11 +4,6 @@
 $font-family-base: system-ui;
 $font-family-heading: 'Protest Strike', sans-serif;
 
-$section-heading-size: 3rem;
-$section-heading-size-min: 1.5rem;
-$section-heading-color: lighten(colors.$color-secondary, 3%);
-$section-heading-letter-spacing: 0.75em;
-
 // MEDIA QUERIES
 $breakpoints: (
   'tablet': 786px,

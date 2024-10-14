@@ -21,26 +21,47 @@
     background-color: colors.$color-secondary;
   }
 
-  &__heading {
-    $font-size-min: constants.$section-heading-size-min;
-    $font-size-max: constants.$section-heading-size;
+  &__bar-heading {
+    $font-size-min: 1.5rem;
+    $font-size-max: 3rem;
 
     position: sticky;
     top: 0;
     padding: constants.$space-sections-sm 0;
     writing-mode: vertical-rl;
     font-size: clamp($font-size-min, 8vw, $font-size-max);
-    color: constants.$section-heading-color;
+    color: lighten(colors.$color-secondary, 3%);
     text-transform: uppercase;
     text-shadow: -1px -1px 0.2rem rgba(255, 255, 255, 0.25);
-    letter-spacing: constants.$section-heading-letter-spacing;
+    letter-spacing: 0.75em;
     white-space: nowrap;
   }
 
   &__content {
+    display: flex;
     margin: constants.$space-sections-sm 0;
     padding: 1rem;
+    flex-direction: column;
     flex-grow: 1;
+    gap: 2rem;
+  }
+
+  &__heading {
+    padding: 1rem 0;
+    font-weight: 400;
+    text-align: center;
+    color: colors.$text-color-secondary;
+    letter-spacing: 0.2em;
+    background-color: colors.$color-primary;
+    border-radius: 10rem;
+  }
+
+  @include mixins.mq('tablet') {
+    &__heading {
+      width: fit-content;
+      padding: 1rem 5rem;
+      transform: translateX(-5rem);
+    }
   }
 
   @include mixins.mq('laptop') {
@@ -48,7 +69,7 @@
       margin-left: constants.$space-bar-from-edge-md;
     }
 
-    &__heading {
+    &__bar-heading {
       padding: constants.$space-sections-md 0;
     }
 
@@ -62,7 +83,7 @@
       margin-left: constants.$space-bar-from-edge-lg;
     }
 
-    &__heading {
+    &__bar-heading {
       padding: constants.$space-sections-lg 0;
     }
 

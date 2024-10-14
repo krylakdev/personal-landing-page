@@ -1,12 +1,14 @@
-@use 'helpers/constants' as *;
+@use 'helpers/colors';
+@use 'helpers/constants';
 
 html {
-  font-family: $font-family-base;
+  font-family: constants.$font-family-base;
+  color: colors.$text-color-primary;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: $font-family-heading;
+  font-family: constants.$font-family-heading;
 }

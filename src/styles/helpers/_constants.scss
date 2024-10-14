@@ -1,7 +1,14 @@
+// FONTS
+
 $font-family-base: system-ui;
 $font-family-heading: serif;
 
+// COLORS
+$background-color: #fafafa;
+
+// MEDIA QUERIES
 $breakpoints: (
-  'x': 1200px,
-  'y': 1920px,
+  'tablet': 786px,
+  'laptop': 1280px,
+  'desktop': 1920px,
 );

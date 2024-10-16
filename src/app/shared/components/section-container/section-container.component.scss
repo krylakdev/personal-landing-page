@@ -5,6 +5,7 @@
 
 :host {
   display: block;
+  overflow-x: clip;
 }
 
 .section {
@@ -45,7 +46,7 @@
     animation: slideInFromBottom 1s 1 both;
     animation-timeline: view();
     animation-range-start: cover;
-    animation-range-end: 800px;
+    animation-range-end: 60vh;
   }
 
   &__heading {
@@ -59,7 +60,7 @@
     animation: slideInFromRight 1s 1 both;
     animation-timeline: view();
     animation-range-start: cover;
-    animation-range-end: 500px;
+    animation-range-end: 40vh;
   }
 
   @include mixins.mq('tablet') {

@@ -103,6 +103,14 @@
           "options": {
             "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/krylakdev/personal-landing-page.git",
+            "branch": "gh-pages",
+            "dir": "dist/personal-landing-page"
+          }
         }
       }
     }

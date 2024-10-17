@@ -1,17 +1,42 @@
 @use 'helpers/colors';
+@use 'helpers/mixins';
+@use 'helpers/constants';
 
 .horizontal-bar {
+  $height-min: 48px;
+  $height-max: 128px;
+
   position: absolute;
   inset: auto 0;
-  height: 123px;
+  height: clamp($height-min, 20vw, $height-max);
   background-color: colors.$color-primary;
   box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
 
   &--from-top {
-    top: 100px;
+    top: constants.$space-bar-from-edge-sm * 2;
   }
 
   &--from-bottom {
-    bottom: 100px;
+    bottom: constants.$space-bar-from-edge-sm * 2;
+  }
+
+  @include mixins.mq('laptop') {
+    &--from-top {
+      top: constants.$space-bar-from-edge-md * 2;
+    }
+
+    &--from-bottom {
+      bottom: constants.$space-bar-from-edge-md * 2;
+    }
+  }
+
+  @include mixins.mq('desktop') {
+    &--from-top {
+      top: constants.$space-bar-from-edge-lg;
+    }
+
+    &--from-bottom {
+      bottom: constants.$space-bar-from-edge-lg;
+    }
   }
 }

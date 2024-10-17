@@ -1,0 +1,17 @@
+@use 'helpers/colors';
+
+.horizontal-bar {
+  position: absolute;
+  inset: auto 0;
+  height: 123px;
+  background-color: colors.$color-primary;
+  box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
+
+  &--from-top {
+    top: 100px;
+  }
+
+  &--from-bottom {
+    bottom: 100px;
+  }
+}

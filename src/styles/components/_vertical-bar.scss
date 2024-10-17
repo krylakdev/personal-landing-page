@@ -1,0 +1,40 @@
+@use 'helpers/colors';
+@use 'helpers/mixins';
+@use 'helpers/constants';
+
+.vertical-bar {
+  $width-min: 50px;
+  $width-max: 300px;
+
+  display: flex;
+  margin-left: constants.$space-bar-from-edge-sm;
+  width: clamp($width-min, 20vw, $width-max);
+  min-width: $width-min;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: colors.$color-secondary;
+
+  &__heading {
+    $font-size-min: 1.5rem;
+    $font-size-max: 3rem;
+
+    position: sticky;
+    top: 0;
+    padding: constants.$space-sections-sm 0;
+    writing-mode: vertical-rl;
+    font-size: clamp($font-size-min, 2vw + 1rem, $font-size-max);
+    color: lighten(colors.$color-secondary, 3%);
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0.2rem rgba(255, 255, 255, 0.25);
+    letter-spacing: 0.75em;
+    white-space: nowrap;
+  }
+
+  @include mixins.mq('laptop') {
+    margin-left: constants.$space-bar-from-edge-md;
+  }
+
+  @include mixins.mq('desktop') {
+    margin-left: constants.$space-bar-from-edge-lg;
+  }
+}

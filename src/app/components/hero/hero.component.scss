@@ -1,6 +1,5 @@
 @use 'helpers/colors';
 @use 'helpers/constants';
-@use 'helpers/mixins';
 @use 'helpers/animations' as *;
 
 :host {
@@ -14,8 +13,8 @@
   height: 100%;
 
   &__content {
-    flex-grow: 1;
-    padding: 2rem 1rem;
+    width: 100%;
+    padding: 1rem;
   }
 
   &__heading,
@@ -44,23 +43,5 @@
 
   &__subheading-uppercase {
     text-transform: uppercase;
-  }
-
-  @include mixins.mq('tablet') {
-    &__content {
-      padding: 6rem 4rem;
-    }
-  }
-
-  @include mixins.mq('laptop') {
-    &__content {
-      padding: 8rem 6rem;
-    }
-  }
-
-  @include mixins.mq('desktop') {
-    &__content {
-      padding: 10rem 8rem;
-    }
   }
 }

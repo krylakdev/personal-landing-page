@@ -1,25 +1,5 @@
-@use 'helpers/constants';
 @use 'helpers/colors';
-@use 'helpers/mixins';
 
 body {
   background-color: colors.$main-background-color;
-}
-
-.vertical-bar {
-  $width-min: constants.$bar-width-horizontal-min;
-  $width-max: constants.$bar-width-horizontal;
-
-  margin-left: constants.$space-bar-from-edge-sm;
-  width: clamp($width-min, 20vw, $width-max);
-  min-width: $width-min;
-  background-color: colors.$color-secondary;
-
-  @include mixins.mq('laptop') {
-    margin-left: constants.$space-bar-from-edge-md;
-  }
-
-  @include mixins.mq('desktop') {
-    margin-left: constants.$space-bar-from-edge-lg;
-  }
 }

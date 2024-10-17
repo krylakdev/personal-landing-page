@@ -11,34 +11,12 @@
 .section {
   display: flex;
 
-  &__bar {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  &__bar-heading {
-    $font-size-min: 1.5rem;
-    $font-size-max: 3rem;
-
-    position: sticky;
-    top: 0;
-    padding: constants.$space-sections-sm 0;
-    writing-mode: vertical-rl;
-    font-size: clamp($font-size-min, 8vw, $font-size-max);
-    color: lighten(colors.$color-secondary, 3%);
-    text-transform: uppercase;
-    text-shadow: -1px -1px 0.2rem rgba(255, 255, 255, 0.25);
-    letter-spacing: 0.75em;
-    white-space: nowrap;
-  }
-
   &__content-container {
     display: flex;
     margin: constants.$space-sections-sm 0;
     padding: 1rem;
     flex-direction: column;
-    flex-grow: 1;
+    width: 100%;
     gap: 2rem;
   }
 

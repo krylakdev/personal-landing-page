@@ -13,8 +13,16 @@
   height: 100%;
 
   &__content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     width: 100%;
     padding: 1rem;
+  }
+
+  &__headings-container {
+    margin-bottom: 10vh;
+    text-align: right;
   }
 
   &__heading,
@@ -26,7 +34,7 @@
 
   &__heading {
     $font-size-min: 3rem;
-    $font-size-max: 6rem;
+    $font-size-max: 9rem;
 
     font-size: clamp($font-size-min, 8vw, $font-size-max);
     animation-delay: 0.2s;
@@ -34,7 +42,7 @@
 
   &__subheading {
     $font-size-min: 1.5rem;
-    $font-size-max: 3rem;
+    $font-size-max: 4.5rem;
 
     font-size: clamp($font-size-min, 4vw, $font-size-max);
     font-weight: 400;

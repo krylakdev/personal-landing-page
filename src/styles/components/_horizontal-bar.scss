@@ -12,6 +12,19 @@
   background-color: colors.$color-primary;
   box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.25);
 
+  &::before {
+    $width-min: 50px;
+    $width-max: 300px;
+
+    position: absolute;
+    inset: 0 auto;
+    left: constants.$space-bar-from-edge-sm;
+    content: '';
+    background-color: darken(colors.$color-primary, 10%);
+    width: clamp($width-min, 20vw, $width-max);
+    transform: skew(-30deg);
+  }
+
   &--from-top {
     top: constants.$space-bar-from-edge-sm * 2;
   }
@@ -21,6 +34,11 @@
   }
 
   @include mixins.mq('laptop') {
+    &::before {
+      left: constants.$space-bar-from-edge-md;
+      transform: skew(-40deg);
+    }
+
     &--from-top {
       top: constants.$space-bar-from-edge-md * 2;
     }
@@ -31,6 +49,11 @@
   }
 
   @include mixins.mq('desktop') {
+    &::before {
+      left: constants.$space-bar-from-edge-lg;
+      transform: skew(-50deg);
+    }
+
     &--from-top {
       top: constants.$space-bar-from-edge-lg;
     }

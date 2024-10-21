@@ -3,8 +3,8 @@
 @use 'helpers/constants';
 
 .horizontal-bar {
-  $height-min: 48px;
-  $height-max: 128px;
+  $height-min: constants.$horizontal-bar-height-min;
+  $height-max: constants.$horizontal-bar-height-max;
 
   position: absolute;
   inset: auto 0;

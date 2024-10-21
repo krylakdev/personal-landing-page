@@ -1,4 +1,5 @@
 @use 'helpers/mixins';
+@use 'helpers/constants';
 
 :host {
   display: block;
@@ -20,4 +21,11 @@
   @include mixins.mq('desktop') {
     background-image: $linear-gradient, url('public/images/hero-bg-1920.jpg');
   }
+}
+
+.footer {
+  $height-min: constants.$horizontal-bar-height-min * 3;
+  $height-max: constants.$horizontal-bar-height-max * 3;
+
+  height: clamp($height-min, 20vw, $height-max);
 }

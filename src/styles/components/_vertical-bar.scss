@@ -10,6 +10,7 @@
   margin-left: constants.$space-bar-from-edge-sm;
   width: clamp($width-min, 20vw, $width-max);
   min-width: $width-min;
+  max-width: $width-max;
   justify-content: center;
   align-items: flex-start;
   background-color: colors.$color-secondary;

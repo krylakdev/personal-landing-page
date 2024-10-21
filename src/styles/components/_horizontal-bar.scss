@@ -20,7 +20,7 @@
     inset: 0 auto;
     left: constants.$space-bar-from-edge-sm;
     content: '';
-    background-color: darken(colors.$color-primary, 10%);
+    background-color: colors.$color-primary-darken;
     width: clamp($width-min, 20vw, $width-max);
     transform: skew(-30deg);
   }

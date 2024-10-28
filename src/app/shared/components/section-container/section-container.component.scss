@@ -21,6 +21,9 @@
   }
 
   &__content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
     animation: slideInFromBottom 1s 1 both;
     animation-timeline: view();
     animation-range-start: cover;

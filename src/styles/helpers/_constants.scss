@@ -25,3 +25,10 @@ $space-bar-from-edge-lg: 6rem;
 // BARS
 $horizontal-bar-height-min: 48px;
 $horizontal-bar-height-max: 128px;
+
+// SHADOWS
+$card-shadow: 0 4px 0.5rem 0 colors.$card-shadow-color;
+
+// ROUNDS
+$card-rounding-outer: 1rem;
+$card-rounding-inner: calc($card-rounding-outer / 2);

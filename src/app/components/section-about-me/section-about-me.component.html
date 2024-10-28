@@ -1,0 +1,17 @@
+<article class="about-me">
+  <div class="about-me__img-container">
+    <img class="about-me__img" ngSrc="/images/profile-image.jpg" alt="profile image" fill />
+  </div>
+  <p class="about-me__content">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eius explicabo iste iusto magni nemo neque,
+    perspiciatis? Ducimus ea eius fuga temporibus. Cumque eligendi maxime nostrum, officiis quibusdam saepe.
+  </p>
+  <div class="about-me__experience-card-container">
+    @for (item of experienceCardList; track item.text) {
+      <div class="experience-card">
+        <p class="experience-card__digit">{{ item.digit }}+</p>
+        <p class="experience-card__text">{{ item.text }}</p>
+      </div>
+    }
+  </div>
+</article>

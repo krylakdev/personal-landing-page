@@ -1,0 +1,96 @@
+@use 'helpers/colors';
+@use 'helpers/constants';
+@use 'helpers/animations' as *;
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:host {
+  display: block;
+}
+
+.about-me {
+  $image-size: 128px;
+
+  position: relative;
+  display: flex;
+  padding: calc($image-size / 2 + 3rem) 2rem 3rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  background-color: colors.$card-background-color;
+  box-shadow: constants.$card-shadow;
+  border-radius: constants.$card-rounding-outer;
+  z-index: -2;
+
+  &__img-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: $image-size;
+    height: $image-size;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__experience-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.experience-card {
+  $card-size: 128px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: constants.$card-rounding-inner;
+  background-color: colors.$card-background-color;
+  width: $card-size;
+  height: $card-size;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    padding: 72px;
+    width: 100%;
+    height: 100%;
+    border-radius: constants.$card-rounding-outer;
+    background-image: conic-gradient(
+      from var(--angle),
+      colors.$color-primary-lighten,
+      colors.$color-secondary-lighten,
+      colors.$color-primary-lighten
+    );
+    translate: -50% -50%;
+    z-index: -1;
+    animation: 1s borderSpin linear infinite;
+  }
+
+  &__digit {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 0.1rem;
+  }
+}

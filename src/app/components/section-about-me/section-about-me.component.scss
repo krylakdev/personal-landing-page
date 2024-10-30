@@ -34,6 +34,7 @@
     width: $image-size;
     height: $image-size;
     border-radius: 50%;
+    border: 0.5rem solid colors.$color-primary;
     transform: translate(-50%, -50%);
     overflow: hidden;
   }

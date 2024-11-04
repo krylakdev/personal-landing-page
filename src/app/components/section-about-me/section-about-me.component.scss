@@ -14,7 +14,7 @@
 }
 
 .about-me {
-  $image-size: 128px;
+  $image-size: 176px;
 
   position: relative;
   display: flex;
@@ -34,7 +34,7 @@
     width: $image-size;
     height: $image-size;
     border-radius: 50%;
-    border: 0.5rem solid colors.$color-primary;
+    border: 1rem solid colors.$main-background-color;
     transform: translate(-50%, -50%);
     overflow: hidden;
   }

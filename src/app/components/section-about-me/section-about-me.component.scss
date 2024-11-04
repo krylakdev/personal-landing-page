@@ -90,6 +90,13 @@
     animation: 1s borderSpin linear infinite;
   }
 
+  &:nth-child(odd) {
+    &::after {
+      animation-delay: 0.5s;
+      animation-direction: alternate-reverse;
+    }
+  }
+
   &__digit {
     font-size: 3rem;
     font-weight: 700;

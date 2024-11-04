@@ -1,4 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ITechCard } from '@shared/models';
+import { techCardList } from '@shared/constants';
 
 @Component({
   selector: 'app-section-tech-stack',
@@ -8,4 +10,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './section-tech-stack.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SectionTechStackComponent {}
+export class SectionTechStackComponent {
+  experienceCardList: ITechCard[] = techCardList;
+}

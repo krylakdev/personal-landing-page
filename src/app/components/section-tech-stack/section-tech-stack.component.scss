@@ -5,11 +5,31 @@
   display: block;
 }
 
+.tech-stack {
+  &__heading {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 160px);
+    gap: 1rem;
+    justify-content: space-evenly;
+  }
+}
+
 .tech-card {
   padding: 1rem;
   width: fit-content;
   box-shadow: constants.$card-shadow;
   border-radius: constants.$card-rounding-outer;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    scale: 1.1;
+  }
 
   &__img-container {
     position: relative;

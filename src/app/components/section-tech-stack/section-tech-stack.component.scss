@@ -1,3 +1,23 @@
+@use 'helpers/colors';
+@use 'helpers/constants';
+
 :host {
   display: block;
+}
+
+.tech-card {
+  padding: 1rem;
+  width: fit-content;
+  box-shadow: constants.$card-shadow;
+  border-radius: constants.$card-rounding-outer;
+
+  &__img-container {
+    position: relative;
+    width: 128px;
+    height: 128px;
+  }
+
+  &__name {
+    text-align: center;
+  }
 }

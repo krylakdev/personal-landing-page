@@ -1,7 +1,7 @@
 @for (item of techCardList; track item.name) {
   <div class="tech-card">
     <div class="tech-card__img-container">
-      <img class="tech-card__img" [ngSrc]="item.imgPath" [alt]="item.name + ' icon'" fill />
+      <img class="tech-card__img" [ngSrc]="item.imgPath" [alt]="item.name + ' icon'" fill loading="lazy" />
     </div>
     <p class="tech-card__name">{{ item.name }}</p>
   </div>

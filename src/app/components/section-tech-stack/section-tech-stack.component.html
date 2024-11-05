@@ -2,7 +2,7 @@
   <h2 class="tech-stack__heading">Click card to see details</h2>
   <ul class="tech-stack__card-container">
     @for (item of techCardList; track item.name) {
-      <li class="tech-card">
+      <li class="tech-card" appTechCardFlip>
         <div class="tech-card__img-container">
           <img class="tech-card__img" [ngSrc]="item.imgPath" [alt]="item.name + ' icon'" fill loading="lazy" />
         </div>

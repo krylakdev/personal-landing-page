@@ -6,8 +6,12 @@
 }
 
 .tech-stack {
-  &__heading {
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__heading,
+  &__icons-source {
     text-align: center;
   }
 
@@ -16,6 +20,10 @@
     grid-template-columns: repeat(auto-fit, 160px);
     gap: 1rem;
     justify-content: space-evenly;
+  }
+
+  &__icons-source {
+    max-width: initial;
   }
 }
 

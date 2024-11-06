@@ -82,7 +82,7 @@ export const techCardList: ITechCard[] = [
     imgPath: 'images/icons/nestjs-color.svg',
   },
   {
-    name: 'Keycloak Templates',
+    name: 'Keycloak',
     imgPath: 'images/icons/keycloak-color.svg',
   },
 ];

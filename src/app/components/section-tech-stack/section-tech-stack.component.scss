@@ -70,10 +70,25 @@
     }
 
     &--back {
+      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       transform: rotateY(180deg);
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          0deg,
+          colors.$color-primary 0%,
+          lighten(colors.$color-primary, 50%) 50%,
+          colors.$card-background-color 80%
+        );
+      }
     }
   }
 
@@ -83,25 +98,26 @@
     height: 128px;
   }
 
-  &__experience {
-    text-align: center;
-    background-color: var(--experience-color);
-  }
-
+  &__experience-years,
   &__name {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-align: center;
-    color: colors.$card-background-color;
-    text-shadow: 1px 2px 0.2rem colors.$text-shadow-color;
-    z-index: 1;
+    color: colors.$text-color-secondary;
   }
 
   &__experience-years {
-    padding-bottom: 0.5rem;
+    position: absolute;
+    inset: 0;
+    bottom: auto;
     text-align: center;
-    color: colors.$text-color-secondary;
-    background-color: colors.$color-primary;
-    box-shadow: 0 0 3rem 3rem colors.$color-primary;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    background-color: colors.$color-secondary;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-shadow: 1px 2px 0.2rem colors.$text-shadow-color;
+    z-index: 1;
   }
 }

@@ -8,21 +8,22 @@ export class TechCardFlipDirective {
   #el = inject(ElementRef);
   #renderer = inject(Renderer2);
 
-  #className = 'flip';
+  #className = 'tech-card__content-container--flip';
 
   @HostListener('click')
   onClick(): void {
     const hostItem: HTMLElement = this.#el.nativeElement;
+    const interactiveItem: Element = hostItem.children[0];
     const iterableAllItems: Element[] = Array.from(hostItem.parentElement!.children);
 
     iterableAllItems
-      .filter(item => item.classList.contains(this.#className) && item !== hostItem)
-      .forEach(item => this.#renderer.removeClass(item, this.#className));
+      .filter(item => item.children[0].classList.contains(this.#className) && item.children[0] !== interactiveItem)
+      .forEach(item => this.#renderer.removeClass(item.children[0], this.#className));
 
-    if (hostItem.classList.contains(this.#className)) {
-      this.#renderer.removeClass(hostItem, this.#className);
+    if (interactiveItem.classList.contains(this.#className)) {
+      this.#renderer.removeClass(interactiveItem, this.#className);
     } else {
-      this.#renderer.addClass(hostItem, this.#className);
+      this.#renderer.addClass(interactiveItem, this.#className);
     }
   }
 }

@@ -1,10 +1,17 @@
 <article class="tech-stack">
   <h2 class="tech-stack__heading">Click card to see details</h2>
-  <ul class="tech-stack__card-container">
+  <ul class="tech-stack__cards-container">
     @for (item of techCardList; track item.name) {
       <li class="tech-card" appTechCardFlip>
-        <div class="tech-card__img-container">
-          <img class="tech-card__img" [ngSrc]="item.imgPath" [alt]="item.name + ' icon'" fill loading="lazy" />
+        <div class="tech-card__content-container">
+          <div class="tech-card__face tech-card__face--front">
+            <div class="tech-card__img-container">
+              <img class="tech-card__img" [ngSrc]="item.imgPath" [alt]="item.name + ' icon'" fill loading="lazy" />
+            </div>
+          </div>
+          <div class="tech-card__face tech-card__face--back">
+            <p class="tech-card__name">{{ item.name }}</p>
+          </div>
         </div>
       </li>
     }

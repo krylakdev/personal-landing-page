@@ -12,7 +12,7 @@
           <div class="tech-card__face tech-card__face--back">
             <p class="tech-card__experience" [style.--experience-color]="'red'">Mid</p>
             <p class="tech-card__name">{{ item.name }}</p>
-            <p class="tech-card__experience-years">3+ years</p>
+            <p class="tech-card__experience-years">{{ item.experienceYears | experienceYearsFormat }}</p>
           </div>
         </div>
       </li>

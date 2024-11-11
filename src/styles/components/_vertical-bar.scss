@@ -19,8 +19,6 @@
     $font-size-min: 1.5rem;
     $font-size-max: 3rem;
 
-    position: sticky;
-    top: 0;
     padding: constants.$space-sections-sm 0;
     writing-mode: vertical-rl;
     font-size: clamp($font-size-min, 2vw + 1rem, $font-size-max);

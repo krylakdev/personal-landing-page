@@ -76,19 +76,6 @@
       justify-content: center;
       align-items: center;
       transform: rotateY(180deg);
-
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        background: linear-gradient(
-          0deg,
-          colors.$color-primary 0%,
-          lighten(colors.$color-primary, 50%) 50%,
-          colors.$card-background-color 80%
-        );
-      }
     }
   }
 

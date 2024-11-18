@@ -9,5 +9,9 @@
   "trailingComma": "es5",
   "bracketSameLine": true,
   "printWidth": 120,
-  "plugins": []
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrderParserPlugins": ["typescript", "decorators-legacy"],
+  "importOrder": ["^@angular$", "rxjs", "^\\w", "^(@components|@shared/*)(/.*|$)", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

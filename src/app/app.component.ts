@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { SectionContainerComponent } from '@shared/components';
+
 import { FooterComponent, HeroComponent, SectionAboutMeComponent, SectionTechStackComponent } from '@components';
+import { SectionContainerComponent } from '@shared/components';
 
 @Component({
   selector: 'app-root',

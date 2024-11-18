@@ -1,5 +1,5 @@
-import { ITechCard } from '../models';
 import { getExperienceYearsNumber } from '../helpers';
+import { ITechCard } from '../models';
 
 export const techCardList: ITechCard[] = [
   {

@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { ITechCard } from './models';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { techCardList } from './constants';
 import { TechCardFlipDirective } from './directives';
+import { ITechCard } from './models';
 import { ExperienceYearsFormatPipe } from './pipes';
 
 @Component({

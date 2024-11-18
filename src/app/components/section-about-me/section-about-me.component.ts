@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { experienceCardList } from '@shared/constants';
-import { IExperienceCard } from '@shared/models';
+import { experienceCardList } from './constants';
+import { IExperienceCard } from './models';
 
 @Component({
   selector: 'app-section-about-me',

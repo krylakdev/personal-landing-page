@@ -1,4 +1,4 @@
-import { IExperienceCard } from '@shared/models';
+import { IExperienceCard } from '../models';
 
 export const experienceCardList: IExperienceCard[] = [
   {

@@ -1,5 +1,5 @@
-import { ITechCard } from '@shared/models';
-import { getExperienceYearsNumber } from '@shared/helpers';
+import { ITechCard } from '../models';
+import { getExperienceYearsNumber } from '../helpers';
 
 export const techCardList: ITechCard[] = [
   {

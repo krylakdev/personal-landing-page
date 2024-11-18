@@ -1,5 +1,6 @@
 @use 'helpers/colors';
 @use 'helpers/constants';
+@use 'helpers/mixins';
 @use 'helpers/animations' as *;
 
 :host {
@@ -14,6 +15,7 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
@@ -21,14 +23,14 @@
   }
 
   &__headings-container {
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     text-align: right;
   }
 
   &__heading,
   &__subheading {
     color: colors.$text-color-secondary;
-    text-shadow: 2px 4px 0.5rem rgba(0, 0, 0, 0.25);
+    text-shadow: constants.$heading-shadow;
     animation: slideInFromLeft 1s 1 both;
   }
 
@@ -51,5 +53,61 @@
 
   &__subheading-uppercase {
     text-transform: uppercase;
+  }
+
+  &__menu-container {
+    margin-bottom: 10vh;
+    animation: slideInFromBottom 1s 1s 1 both;
+  }
+}
+
+.menu {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+
+  &__item {
+    position: relative;
+    width: fit-content;
+    backdrop-filter: blur(1rem);
+    box-shadow: constants.$heading-shadow;
+    border-radius: 5rem;
+    background-color: colors.$color-secondary;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      height: 0;
+      background-color: colors.$color-primary;
+      z-index: -1;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      &::after {
+        height: 100%;
+      }
+    }
+
+    &:focus-within {
+      background-color: colors.$color-secondary-lighten;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: colors.$text-color-secondary;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @include mixins.mq(null, 'landscape') {
+    flex-direction: row;
   }
 }

@@ -1,8 +1,10 @@
+import { getExperienceYearsNumber } from '@shared/helpers';
+
 import { IExperienceCard } from '../models';
 
 export const experienceCardList: IExperienceCard[] = [
   {
-    digit: 3,
+    digit: getExperienceYearsNumber(2022),
     text: 'Years Experience',
   },
   {

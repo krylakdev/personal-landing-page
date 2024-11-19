@@ -21,6 +21,7 @@
   padding: calc($image-size / 2 + 3rem) 2rem 3rem;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
   background-color: colors.$card-background-color;
   box-shadow: constants.$card-shadow;
   border-radius: constants.$card-rounding-outer;
@@ -43,17 +44,21 @@
 
   &__contact-link-container {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
   }
 
   &__experience-card-container {
     display: flex;
-    margin-top: 3rem;
     flex-direction: column;
     gap: 2rem;
   }
 
-  @include mixins.mq(null, 'landscape') {
+  @include mixins.mq('tablet') {
+    &__contact-link-container {
+      flex-direction: row;
+    }
+
     &__experience-card-container {
       flex-direction: row;
       gap: clamp(2rem, 4vw + 1rem, 6rem);

@@ -2,16 +2,26 @@
   <div class="about-me__img-container">
     <img class="about-me__img" ngSrc="images/profile-image.jpg" alt="profile image" fill />
   </div>
+  <ul class="about-me__contact-link-container">
+    @for (item of contactLinkList; track item.text) {
+      <li class="contact-link">
+        <a [href]="item.link" class="contact-link__link" target="_blank">
+          <img [ngSrc]="item.imgSource" [alt]="item.text" class="contact-link__img" width="32" height="32" />
+          <span class="contact-link__text">{{ item.text }}</span>
+        </a>
+      </li>
+    }
+  </ul>
   <p class="about-me__content">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate eius explicabo iste iusto magni nemo neque,
     perspiciatis? Ducimus ea eius fuga temporibus. Cumque eligendi maxime nostrum, officiis quibusdam saepe.
   </p>
-  <div class="about-me__experience-card-container">
+  <ul class="about-me__experience-card-container">
     @for (item of experienceCardList; track item.text) {
-      <div class="experience-card">
+      <li class="experience-card">
         <p class="experience-card__digit">{{ item.digit }}+</p>
         <p class="experience-card__text">{{ item.text }}</p>
-      </div>
+      </li>
     }
-  </div>
+  </ul>
 </article>

@@ -1,8 +1,8 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { experienceCardList } from './constants';
-import { IExperienceCard } from './models';
+import { contactLinkList, experienceCardList } from './constants';
+import { IContactLink, IExperienceCard } from './models';
 
 @Component({
   selector: 'app-section-about-me',
@@ -13,5 +13,6 @@ import { IExperienceCard } from './models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectionAboutMeComponent {
+  contactLinkList: IContactLink[] = contactLinkList;
   experienceCardList: IExperienceCard[] = experienceCardList;
 }
